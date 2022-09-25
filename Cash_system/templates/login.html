@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="/static/phoneinput.js"></script>
+	<style type="text/css">
+		body {
+			background: radial-gradient(
+				201.88% 833.08% at 67.32% 146.63%,
+				#FDE2B1 9.61%, 
+				#C9FFA2 82.26%
+			);
+			transform: rotate(-0.1deg);
+		}
+
+		form {
+			display: grid;
+			margin: auto;
+			max-width: 35%;
+		}
+
+		form>* {
+			margin-top: 10px;
+			border-radius: 15%;
+			border-style: none;
+		}
+	</style>
+	<title>
+		Логин
+	</title>
+</head>
+<body>
+	<form action="/login">
+		{% csrf_token %}
+		<input type="tel" data-tel-input name="login">
+		<input type="password" name="password">
+		<input type="submit" name="submit">
+	</form><br>
+	<hr><br>
+	<a href="/register">Регистрация</a>
+</body>
+</html>
